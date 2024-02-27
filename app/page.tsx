@@ -3,6 +3,8 @@ import { redirect } from 'next/navigation';
 
 import ClientForm from '@/components/ClientForm';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
+import CardStack from '../components/CardStack'; 
+import GridCardStack from '../components/GridCardStack'; 
 
 export default async function Page() {
   const { user } = await validateRequest();
@@ -17,6 +19,7 @@ export default async function Page() {
         <ClientForm action={logout} initialState={{ error: '' }}>
           <button>Sign out</button>
         </ClientForm>
+        <GridCardStack />
       </div>
     </div>
   );
