@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
   const { title, description, imageSrc } = cardData;
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 mb-4">
+    <div className="bg-black shadow-md rounded-lg p-6 mb-4">
       <img src={imageSrc} alt={title} className="w-full rounded-lg mb-4" />
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
       <p className="text-gray-700 mb-4">{description}</p>

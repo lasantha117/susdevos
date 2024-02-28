@@ -12,7 +12,8 @@ export default async function Page() {
     return redirect('/login');
   }
   return (
-    <div className="flex justify-center container p-32">
+    
+    <div className="container">
       <div className="flex flex-col">
         <h1>Hi, {user.username}!</h1>
         <p>Your user ID is {user.id}.</p>
@@ -22,6 +23,16 @@ export default async function Page() {
         <GridCardStack />
       </div>
     </div>
+    
+    // <div className="grid grid-rows-layout h-screen ">
+    //   <div className="bg-gray-100 p-4">Header</div> 
+    //   <div className="grid grid-cols-layout flex-grow">
+    //     <div className="bg-blue-200 p-4">Section1</div>
+    //     <div className="bg-yellow-200 p-4"></div>
+    //     <div className="bg-green-200 p-4"></div>
+    //   </div>
+    //   <div className="bg-gray-200 p-4">Footer</div>
+    // </div>
   );
 }
 
