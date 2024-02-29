@@ -12,27 +12,27 @@ export default async function Page() {
     return redirect('/login');
   }
   return (
-    
-    <div className="container">
-      <div className="flex flex-col">
-        <h1>Hi, {user.username}!</h1>
-        <p>Your user ID is {user.id}.</p>
-        <ClientForm action={logout} initialState={{ error: '' }}>
-          <button>Sign out</button>
-        </ClientForm>
-        <GridCardStack />
+    // The main div
+    <div> 
+      <div className="grid grid-rows-layout h-screen ">
+        <div className="bg-gray-100 p-4">
+          <h1>Hi, {user.username}!</h1>
+          <p>Your user ID is {user.id}.</p>
+          <div className="flex flex-col">
+            <ClientForm action={logout} initialState={{ error: '' }}>
+              <button>Sign out</button>
+            </ClientForm>
+          </div>
+        </div>
+        <div className="grid grid-cols-layout flex-grow">
+          <div className="bg-blue-200 p-4">Section1</div>
+          <div className="bg-yellow-200 p-4">Section2</div>
+          {/* This is added as a exmaple component */}
+          <div className="bg-green-200 p-4"><GridCardStack/></div> 
+        </div>
+        <div className="bg-gray-200 p-4">Footer</div>
       </div>
     </div>
-    
-    // <div className="grid grid-rows-layout h-screen ">
-    //   <div className="bg-gray-100 p-4">Header</div> 
-    //   <div className="grid grid-cols-layout flex-grow">
-    //     <div className="bg-blue-200 p-4">Section1</div>
-    //     <div className="bg-yellow-200 p-4"></div>
-    //     <div className="bg-green-200 p-4"></div>
-    //   </div>
-    //   <div className="bg-gray-200 p-4">Footer</div>
-    // </div>
   );
 }
 
