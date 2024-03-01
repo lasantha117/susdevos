@@ -5,41 +5,17 @@ import Card from '@/components/Card';
 import ClientForm from '@/components/ClientForm';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 
+import AboutCard from "../components/AboutCard"
+
+
 export default async function Page() {
   const { user } = await validateRequest();
   if (!user) {
     return redirect('/login');
   }
   return (
-    <div className="flex justify-center container p-32">
-      <div className="flex gap-8">
-        {/* <h1>Hi, {user.username}!</h1>
-        <p>Your user ID is {user.id}.</p> */}
-        {/* <ClientForm action={logout} initialState={{ error: '' }}>
-          <button>Sign out</button>
-        </ClientForm> */}
-        <Card
-          title="AI-Driven Emissions Intelligence"
-          content="Harness the power of AI for precise emissions 
-        calculations and recommendations, optimizing 
-        your climate mitigation strategies."
-         
-        ></Card>
-        <Card
-          title="AI-Driven Emissions Intelligence"
-          content="Harness the power of AI for precise emissions 
-        calculations and recommendations, optimizing 
-        your climate mitigation strategies."
-         
-        ></Card>
-        <Card
-          title="AI-Driven Emissions Intelligence"
-          content="Harness the power of AI for precise emissions 
-        calculations and recommendations, optimizing 
-        your climate mitigation strategies."
-         
-        ></Card>
-      </div>
+    <div className="mt-0">
+        <AboutCard />
     </div>
   );
 }
