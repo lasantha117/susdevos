@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
       <img src={imageSrc} alt={title} className="w-full rounded-lg mb-4" />
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
       <p className="text-gray-700 mb-4">{description}</p>
-      <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      <button className="bg-text_brand_secondary hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
         Action
       </button>
     </div>
