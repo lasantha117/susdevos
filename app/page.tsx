@@ -2,7 +2,11 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 import ClientForm from '@/components/ClientForm';
+import ButtonCard from '@/components/ButtonCard';
+import NonButtonCard from '@/components/NonButtonCard';
+
 import { lucia, validateRequest } from '@/modules/auth/lucia';
+
 
 export default async function Page() {
   const { user } = await validateRequest();
@@ -10,15 +14,10 @@ export default async function Page() {
     return redirect('/login');
   }
   return (
-    <div className="flex justify-center container p-32">
-      <div className="flex flex-col">
-        <h1>Hi, {user.username}!</h1>
-        <p>Your user ID is {user.id}.</p>
-        <ClientForm action={logout} initialState={{ error: '' }}>
-          <button>Sign out</button>
-        </ClientForm>
-      </div>
+    <div className="flex justify-center container p-32 mx-auto"> 
+        <ButtonCard></ButtonCard>
     </div>
+
   );
 }
 
