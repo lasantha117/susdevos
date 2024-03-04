@@ -12,7 +12,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
   return (
     <div className="rounded-3xl /*border-4 border-black*/ border-solid  p-4 h-full w-[20rem]  bg-gray-50">  
-      <div className="relative rounded-full overflow-hidden h-20 w-20 bg-teal-300">
+      <div className="relative rounded-full overflow-hidden h-20 w-20 bg-[#2AD2C9] bg-opacity-64">
         <Image 
           src={image} 
           alt={title} 

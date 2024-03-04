@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 import ClientForm from '@/components/ClientForm';
-import ButtonCard from '@/components/ButtonCard';
+import ButtonCard from '@/components/Card/ButtonCard';
 import NonButtonCard from '@/components/NonButtonCard';
 
 import { lucia, validateRequest } from '@/modules/auth/lucia';
@@ -28,15 +28,12 @@ export default async function Page() {
               <button>Sign out</button>
             </ClientForm>
           </div>
-          <div className="flex justify-center container p-32 mx-auto"> 
-        <ButtonCard></ButtonCard>
-          </div>
         </div>
         <div className="grid grid-cols-layout flex-grow">
           <div className="bg-blue-200 p-4">Section1</div>
           <div className="bg-yellow-200 p-4">Section2</div>
           {/* This is added as a exmaple component */}
-          <div className="bg-green-200 p-4"><GridCardStack/></div> 
+          <div className="bg-green-200 p-32 flex justify-center container mx-auto"><ButtonCard/></div> 
         </div>
         <div className="bg-gray-200 p-4">Footer</div>
       </div>
