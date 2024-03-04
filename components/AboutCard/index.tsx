@@ -15,8 +15,7 @@ const About: React.FC = () => {
       cardCn:
         'px-2 py-1 sm:px-4 sm:py-2 min-w-48 max-w-52 min-h-52 sm:max-w-64 sm:max-h-fit md:max-w-64 md:max-h-fit rounded-2xl lg:px-6 md:py-4  lg:min-w-96 lg:max-h-fit lg:rounded-3xl border-solid mt-2 shadow-lg bg-teal-400 ',
       pCn: 'mx-4 mt-4 text-xs lg:mx-6 lg:mt-8 font-medium lg:text-2xl lg:mb-5 text-slate-950',
-      buttonCn:
-        'text-xs w-20 h-6 mb-4 mt-4 mx-4 sm:text-sm sm:w-24 sm:h-8 sm:mb-6 sm:mt-6 sm:mx-4 lg:w-32 lg:h-11 lg:mb-8 lg:mt-8 rounded-full border-none lg:mx-6  text-white bg-slate-950',
+      buttonCn:'bg-slate-950 text-white',
     },
     {
       imgSrc:
@@ -26,8 +25,7 @@ const About: React.FC = () => {
       cardCn:
         'px-2 py-1 sm:px-4 sm:py-2 min-w-48 max-w-52 min-h-52 sm:max-w-64 sm:max-h-fit md:min-w-64 md:max-h-fit rounded-2xl lg:px-6 md:py-4  lg:min-w-96 lg:max-h-fit lg:rounded-3xl border-solid mt-2  bg-slate-950 shadow-lg',
       pCn: 'mx-4 mt-4 text-xs lg:mx-6 lg:mt-8 font-medium lg:text-2xl lg:mb-5 text-gray-100',
-      buttonCn:
-        'text-xs w-20 h-6 mb-4 mt-4 mx-4 sm:text-sm sm:w-24 sm:h-8 sm:mb-6 sm:mt-6 sm:mx-4 lg:w-32 lg:h-11 lg:mb-8 lg:mt-8 rounded-full border-none lg:mx-6 bg-white text-black',
+      buttonCn:'bg-white text-black',
     },
     {
       imgSrc:
@@ -37,8 +35,7 @@ const About: React.FC = () => {
       cardCn:
         'px-2 py-1 sm:px-4 sm:py-2 min-w-48 max-w-52 min-h-52 sm:max-w-64 sm:max-h-fit md:m-w-64 md:max-h-fit rounded-2xl lg:px-6 md:py-4  lg:min-w-96 lg:max-h-fit lg:rounded-3xl border-solid mt-2  bg-orange-300 shadow-lg',
       pCn: 'mx-4 mt-4 text-xs lg:mx-6 lg:mt-8 font-medium lg:text-2xl lg:mb-5 text-slate-950',
-      buttonCn:
-        'text-xs w-20 h-6 mb-4 mt-4 mx-4 sm:text-sm sm:w-24 sm:h-8 sm:mb-6 sm:mt-6 sm:mx-4 lg:w-32 lg:h-11 lg:mb-8 lg:mt-8 rounded-full border-none lg:mx-6 text-white bg-slate-950',
+      buttonCn:'bg-slate-950 text-white',
     },
   ];
 

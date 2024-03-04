@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
           <p className={pCn}>
             {content}
           </p>
-          <Button className={buttonCn}>
+          <Button className={`text-xs w-20 h-6 mb-4 mt-4 mx-4 sm:text-sm sm:w-24 sm:h-8 sm:mb-6 sm:mt-6 sm:mx-4 lg:w-32 lg:h-11 lg:mb-8 lg:mt-8 rounded-full border-none lg:mx-6 ${buttonCn}`}>
             Read More
           </Button>
         </div>
