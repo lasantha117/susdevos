@@ -28,7 +28,6 @@ export default async function Page() {
         <div className="grid grid-cols-layout flex-grow">
           <div className="bg-blue-200 p-4">Section1</div>
           <div className="bg-yellow-200 p-4"><AboutCard/></div>
-          {/* This is added as a exmaple component */}
           <div className="bg-green-200 p-4"><GridCardStack/></div> 
         </div>
         <div className="bg-gray-200 p-4">Footer</div>
