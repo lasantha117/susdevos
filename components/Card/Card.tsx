@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
           alt={title} 
           layout="fill" 
           objectFit="cover" 
-          className="rounded-t-xl p-2" 
+          className="rounded-t-xl p-4" 
         />
       </div>
       <div className="p-4 h-80">
@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
       <div className="flex justify-end items-end">
           <div  className="bg-black /*hover:bg-blue-700*/ h-12 w-12  flex items-center justify-center rounded-full">
               <Image 
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='36' height='36' fill='rgba(255,255,255,1)'%3E%3Cpath fill='none' d='M0 0h24v24H0z'%3E%3C/path%3E%3Cpath d='M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z'%3E%3C/path%3E%3C/svg%3E" 
+                src="/ButtonCard/CircledUpRigh.png" 
                 alt="Button Image"
                 width={32}
                 height={32}

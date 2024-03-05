@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import ClientForm from '@/components/ClientForm';
 import ButtonCard from '@/components/Card/ButtonCard';
 import NonButtonCard from '@/components/NonButtonCard';
+import Footer from '@/components/Footer/Footer';
 
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import CardStack from '../components/CardStack'; 
@@ -35,7 +36,7 @@ export default async function Page() {
           {/* This is added as a exmaple component */}
           <div className="bg-green-200 p-32 flex justify-center container mx-auto"><ButtonCard/></div> 
         </div>
-        <div className="bg-gray-200 p-4">Footer</div>
+        <div className="bg-[#111827] h-[76px] flex justify-center container"><Footer/></div>
       </div>
     </div>
 
