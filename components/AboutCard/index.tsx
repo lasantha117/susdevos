@@ -5,40 +5,32 @@ import { Button } from 'react-aria-components';
 
 import Card from './ACard';
 
+
 const About: React.FC = () => {
   const cardDataArray = [
     {
-      imgSrc:
-        'https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png',
+      imgSrc: '/Images/AboutCard/image01.webp',
       content:
         'How SusDev OS resolves typical issues facing climate impact mitigation action',
-      cardCn:
-        'shadow-lg bg-teal-400 ',
+      cardCn: 'shadow-lg bg-teal-400 ',
       pCn: 'text-slate-950',
-      buttonCn:
-        'text-white bg-slate-950',
+      buttonCn: 'text-white bg-slate-950',
     },
     {
-      imgSrc:
-        'https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png',
+      imgSrc: '/Images/AboutCard/image02.webp',
       content:
         'Are you from the private sector looking to de-carbonize? We have you covered',
-      cardCn:
-        'bg-slate-950 shadow-lg',
+      cardCn: 'bg-slate-950 shadow-lg',
       pCn: 'text-gray-100',
-      buttonCn:
-        'bg-white text-black',
+      buttonCn: 'bg-white text-black',
     },
     {
-      imgSrc:
-        'https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png',
+      imgSrc: '/Images/AboutCard/image03.webp',
       content:
         'AI-powered insights for UN-FCCC, NDC, UN-SDG, SBTi, Sendai framework compliance',
-      cardCn:
-        'bg-orange-300 shadow-lg',
+      cardCn: 'bg-orange-300 shadow-lg',
       pCn: 'text-slate-950',
-      buttonCn:
-        'text-white bg-slate-950',
+      buttonCn: 'text-white bg-slate-950',
     },
   ];
 
