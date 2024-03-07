@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
   return (
-    <div className="rounded-3xl /*border-4 border-black*/ border-solid  p-4 h-full w-[20rem]  bg-gray-50">  
+    <div className="rounded-3xl /*border-4 border-black*/ border-solid  p-4 h-full  bg-gray-50">  
       <div className="relative rounded-full overflow-hidden h-20 w-20 bg-[#2AD2C9] bg-opacity-64">
         <Image 
           src={image} 
@@ -26,9 +26,9 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
         <p className="pt-6 text-slate-400 subpixel-antialiased mb-4">{content}</p>
       </div>
       <div className="flex justify-end items-end">
-          <div  className="bg-black /*hover:bg-blue-700*/ h-12 w-12  flex items-center justify-center rounded-full">
+          <div  className="/*hover:bg-blue-700*/ h-12 w-12  flex items-center justify-center rounded-full">
               <Image 
-                src="/ButtonCard/CircledUpRigh.png" 
+                src="/ButtonCard/CircledUpRight.png" 
                 alt="Button Image"
                 width={32}
                 height={32}

@@ -4,37 +4,37 @@ const cardData = [
     {
       title: "We grasp the climate change issues at the root causes",
       content: "A fundamental lack of visibility into the impact of climate change due to development exists. SusDev OS helps bridge the gap.",
-      image: "/ButtonCard/DewPoint.png",
+      image: "/Image/ButtonCard/DewPoint.png",
       button: <button></button>
     },
     {
         title: "The power of open-source",
         content: "Giving you complete visibility into the security and technologies at work. We let you customize and use SusDev OS free.",
-        image: "/ButtonCard/LaptopSettings.png",
+        image: "/Image/ButtonCard/LaptopSettings.png",
         button: <button></button>
       },
       {
         title: "A decentralized OS network that feeds global dashboards",
         content: "With your consent, SusDev OS updates global climate dashboards with real-time progress data.",
-        image: "/ButtonCard/Barchart.png",
+        image: "/Image/ButtonCard/Barchart.png",
         button: <button></button>
       },
       {
         title: "Why are we addressing the full spectrum of climate frameworks",
         content: "Information silos cloud climate data, slowing MRV emissions processes. With experts, we chose the tougher, correct path.",
-        image: "/ButtonCard/Datausage.png",
+        image: "/Image/ButtonCard/Datausage.png",
         button: <button></button>
       },
       {
         title: "UNFCCC NDC data from energy, transport, deforestation sectors",
         content: "High emissions in energy, transport, and deforestation impact scope 1-3 calculations. Our AI streamlines tracking and reduces GHGs.",
-        image: "/ButtonCard/EarthElement.png",
+        image: "/Image/ButtonCard/EarthElement.png",
         button: <button></button>
       },
       {
         title: "How is a project managed with a focus on emissions & foot print",
         content: "Our platform offers a modular design, letting organizations select features for their project management.",
-        image: "/ButtonCard/Eco.png",
+        image: "/Image/ButtonCard/Eco.png",
         button: <button></button>
       },
     // Add more card data objects as needed

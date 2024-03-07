@@ -10,8 +10,8 @@ const footerData = [
 
 export default function Page() {
   return (
-    <footer className="text-white p-4">
-        <div className="flex sm:flex-cols-1 md:flex-cols-2 lg:flex-cols-4 gap-8">
+    <footer className="w-full text-white p-4">
+        <div className="flex flex-col flex-wrap justify-center items-center w-full sm:flex-row gap-8">
           {footerData.map((item, index) => (
             <div key={index} className='text-lg font-Outfit m-2 hover:text-gray-400'>
               <Link href={item.link} as={item.link}>{item.label}</Link>

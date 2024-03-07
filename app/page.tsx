@@ -34,9 +34,9 @@ export default async function Page() {
           <div className="bg-blue-200 p-4">Section1</div>
           <div className="bg-yellow-200 p-4">Section2</div>
           {/* This is added as a exmaple component */}
-          <div className="bg-green-200 p-32 flex justify-center container mx-auto"><ButtonCard/></div> 
+          <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard/></div> 
         </div>
-        <div className="bg-[#111827] h-[76px] flex justify-center container"><Footer/></div>
+        <div className="bg-[#111827] flex justify-center container mx-auto"><Footer/></div>
       </div>
     </div>
 
