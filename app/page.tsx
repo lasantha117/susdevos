@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 import ClientForm from '@/components/ClientForm';
-import ButtonCard from '@/components/Card/ButtonCard';
+import ButtonCard from '@/components/Card';
 import NonButtonCard from '@/components/NonButtonCard';
 import Footer from '@/components/Footer/Footer';
 
