@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
       <div className="flex justify-end items-end">
           <div  className="/*hover:bg-blue-700*/ h-12 w-12  flex items-center justify-center rounded-full">
               <Image 
-                src="/ButtonCard/CircledUpRight.png" 
+                src="/Images/ButtonCard/CircledUpRight.png" 
                 alt="Button Image"
                 width={32}
                 height={32}
