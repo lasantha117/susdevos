@@ -49,8 +49,8 @@ const NavBar = () => {
               </h2>
               {/* Grid container for buttons */}
               <div className="grid grid-cols-2 gap-2">
-                <button className="h-12 w-32 border border-teal-400 rounded-lg text-teal-400 hover:bg-teal-100">Sign In</button>
-                <button className="h-12 w-32 bg-teal-400 text-white rounded-lg hover:bg-teal-500">Register</button>
+                <button className="h-12 w-32 border-solid border-1 outline outline-2 outline-slate-900 text-slate-900 rounded-lg bg-white hover:bg-slate-200">Sign In</button>
+                <button className="h-12 w-32 border-solid border-1 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Register</button>
               </div>
             </div>
           </div>
@@ -67,8 +67,8 @@ const NavBar = () => {
           </h2>
           {/* Grid container for buttons */}
           <div className="grid grid-cols-1 gap-2">
-            <button className="h-12 w-full border border-teal-400 rounded-lg text-teal-400 hover:bg-teal-100">Sign In</button>
-            <button className="h-12 w-full bg-teal-400 text-white rounded-lg hover:bg-teal-500">Register</button>
+            <button className="h-12 w-full border-solid border-1 outline outline-2 outline-slate-900 text-slate-900 rounded-lg bg-white hover:bg-slate-200">Sign In</button>
+            <button className="h-12 w-full border-solid border-1 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Register</button>
           </div>
         </div>
       </div>
