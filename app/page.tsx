@@ -5,6 +5,7 @@ import ClientForm from '@/components/ClientForm';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import CardStack from '../components/CardStack'; 
 import GridCardStack from '../components/GridCardStack'; 
+import CasePage from '@/components/Case/CasePage';
 
 export default async function Page() {
   const { user } = await validateRequest();
@@ -30,6 +31,7 @@ export default async function Page() {
           {/* This is added as a exmaple component */}
           <div className="bg-green-200 p-4"><GridCardStack/></div> 
         </div>
+        <div><CasePage/></div> 
         <div className="bg-gray-200 p-4">Footer</div>
       </div>
     </div>
