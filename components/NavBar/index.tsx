@@ -22,7 +22,7 @@ const NavBar = () => {
             {/* Container for logo text */}
             <div className="flex-shrink-0 mr-4">
               {/* Logo text */}
-              <span className="text-lg font-semibold">SusDev OS</span>
+              <span className="text-lg bg-teal-500 rounded-full p-2 font-semibold">SusDev OS</span>
             </div>
           </div>
           <div className="-mr-2 flex xl:hidden">
