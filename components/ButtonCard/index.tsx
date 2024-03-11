@@ -1,4 +1,6 @@
-import Card from "./Card";
+import Card from "./BCard";
+
+// Adding all componet data in to array
 
 const cardData = [
     {
@@ -42,7 +44,8 @@ const cardData = [
 
   export default function Page() {
     return (
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+      //call the Card.tsx as a grid
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 "> 
           {cardData.map((card, index) => (
             <Card key={index} title={card.title} content={card.content} image={card.image} button={card.button} />
           ))}
