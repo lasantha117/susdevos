@@ -1,6 +1,6 @@
 export default function MainContent() {
   return (
-    <div className="bg-white py-28">
+    <div className="bg-white py-28 mx-auto">
       {/* Main Content Container */}
       <div className="flex flex-col justify-center px-20">
         {/* Main Heading */}
