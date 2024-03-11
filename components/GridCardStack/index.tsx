@@ -41,7 +41,7 @@ const CardStack: React.FC = () => {
         <div className="bg-slate-200" >
             <h2 className="text-xl font-semibold mb-2 ">Section Title</h2>
             <p className="text-gray-700 lg:text-2xl md:text-xl mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, ipsa fuga! Perferendis accusantium dolorem alias maiores, odit molestias blanditiis, illum, quae vitae eligendi aspernatur magnam aliquam eaque nemo placeat. Temporibus!</p>
-            <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center container">
+            <div className="bg-black grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center container">
                 {/* Loop through yourArray and render a Card for each item */}
                 {cardDataArray.map((cardData, index) => (
                     <Card key={index} cardData={cardData} />
