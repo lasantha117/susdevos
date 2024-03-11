@@ -4,7 +4,6 @@ import ClientForm from '@/components/ClientForm';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
 import GridCardStack from '../components/GridCardStack'; 
-import Header from '@/components/Header/Header';
 import NavBar from '@/components/NavBar';
 
 export default async function Page() {
