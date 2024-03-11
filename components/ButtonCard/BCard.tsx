@@ -14,15 +14,13 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
     //Adding top image in the card
     <div className="rounded-3xl /*border-4 border-black*/ border-solid  p-4 h-full  bg-gray-50">  
       <div className="relative rounded-full overflow-hidden h-20 w-20 bg-[#2AD2C9] bg-opacity-64">
-      <img
+      <Image
           src={image}
           alt={title}
+          width={50}
+          height={50}
           className="rounded-t-xl p-4"
-          style={{
-            objectFit: 'cover',
-            width: '100%',
-            height: '100%'
-          }}
+          style={{ objectFit: 'cover', width: '100%', height: '100%' }}
         />
       </div>
       {/*Adding Title and contaent of the card */}
@@ -33,16 +31,13 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
       {/*Adding below button*/}
       <div className="flex justify-end items-end">
           <div  className=" h-12 w-12  flex items-center justify-center rounded-full">
-          <img
+          <Image
             src="/Images/ButtonCard/CircledUpRight.png"
             alt="Button Image"
-            width={32}
-            height={32}
+            width={50}
+            height={50}
             className="rounded-full hover:bg-black"
-            style={{
-              width: '100%',
-              height: 'auto'
-            }}
+            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
           />
               {button}
           </div>
