@@ -3,8 +3,11 @@ import { redirect } from 'next/navigation';
 import ClientForm from '@/components/ClientForm';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
+import CaseCard from "../components/CaseCard"
 import GridCardStack from '../components/GridCardStack'; 
 import NavBar from '@/components/NavBar';
+
+
 
 export default async function Page() {
   const { user } = await validateRequest();
@@ -30,6 +33,7 @@ export default async function Page() {
           <div className="bg-white"><AboutCard/></div>
           <div className="bg-green-200"><GridCardStack/></div> 
         </div>
+        <div><CaseCard/></div> 
         <div className="bg-gray-200 p-4">Footer</div>
       </div>
     </div>

@@ -1,5 +1,8 @@
 {
   "conventionalCommits.scopes": [
     "project"
+  ],
+  "cSpell.words": [
+    "webp"
   ]
 }
