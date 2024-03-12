@@ -16,11 +16,7 @@ const Case: React.FC = () => {
       buttonCn: 'text-black bg-white bg-slate-950', //Button  class name
     },
     {
-<<<<<<< HEAD
       imgSrc: '/Images/CaseCard/caseStudyCardImage2.webp',
-=======
-      imgSrc: '/Images/CaseCard/caseStudyCardImage1.webp',
->>>>>>> 310f17cbab7fc5e720f82eb56054d09667c82ba3
       content: 'Road extension through a city and forest area', //Description of the case study
       cardCn: '', //Card class name
       pCn: 'text-slate-950', //Description (pCn: paragraph class name)

@@ -33,11 +33,12 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
           </p>
 
          <Button
-  className={`bg-white flex-none lg:w-[164px] lg:h-[44px] lg:gap-[10px] lg:mt-6 sm:ml-2 lg:ml-6  justify-center  block rounded-md sm:px-2 sm:py-2 sm:mt-4 lg:px-6 lg:py-2  text-left text-sm font-semibold text-black shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 p-4  ${buttonCn}`}
+  className={`bg-white flex-none lg:w-[164px] lg:h-[44px] lg:gap-[10px] lg:mt-6 sm:ml-2 lg:ml-6  justify-center  block rounded-[100px] sm:px-2 sm:py-2 sm:mt-4 lg:px-6 lg:py-2  text-left text-sm font-semibold text-black shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 p-4  ${buttonCn}`}
 >
-  <svg xmlns="http://www.w3.org/2000/svg"  fill="" viewBox="0 0 22 24" strokeWidth={1.5} stroke="currentColor" className=" sm:w-4 sm:h-4 ml-24 ">
+  {/* <svg xmlns="http://www.w3.org/2000/svg"  fill="" viewBox="0 0 22 24" strokeWidth={1.5} stroke="currentColor" className=" sm:w-4 sm:h-4 ml-24 ">
     <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
   </svg>
+  */}
   Read More
 </Button>
 
