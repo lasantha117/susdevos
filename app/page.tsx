@@ -1,8 +1,13 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import ClientForm from '@/components/ClientForm';
+import ButtonCard from '@/components/ButtonCard';
+import NonButtonCard from '@/components/NonButtonCard';
+import Footer from '@/components/Footer/Footer';
+
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
+import CaseCard from "../components/CaseCard"
 import GridCardStack from '../components/GridCardStack'; 
 import NavBar from '@/components/NavBar';
 import MainContent from '@/components/MainContent';
@@ -13,6 +18,7 @@ export default async function Page() {
     return redirect('/login');
   }
   return (
+
     // The main div
     <div> 
       <div className="grid grid-rows-layout h-screen">
@@ -27,14 +33,16 @@ export default async function Page() {
         </div>
         <div className="grid grid-cols-layout flex-grow">
           {/* <div className="bg-blue-100"><Header/></div> */}
-          <div className="bg-white"><NavBar/></div>
+          <div className="bg-blue-100"><NavBar/></div>
           <div className="bg-teal-100"><MainContent/></div>
-          <div className="bg-white"><AboutCard/></div>
-          <div className="bg-green-200"><GridCardStack/></div> 
+          <div className="bg-blue-300"><AboutCard/></div>
+          <div><CaseCard/></div> 
+        <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard/></div> 
+        <div className="bg-[#111827] flex justify-center container mx-auto"><Footer/></div>
         </div>
-        <div className="bg-gray-200 p-4">Footer</div>
       </div>
     </div>
+
   );
 }
 
