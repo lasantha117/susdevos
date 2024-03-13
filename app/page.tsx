@@ -10,6 +10,7 @@ import AboutCard from "../components/AboutCard"
 import CaseCard from "../components/CaseCard"
 import GridCardStack from '../components/GridCardStack'; 
 import NavBar from '@/components/NavBar';
+import HaveAQuestion from '@/components/HaveAQuestion';
 
 
 
@@ -36,6 +37,7 @@ export default async function Page() {
           {/* <div className="bg-blue-100"><Header/></div> */}
           <div className="bg-blue-100"><NavBar/></div>
           <div className="bg-blue-300"><AboutCard/></div>
+          <div><HaveAQuestion/></div>
           <div><CaseCard/></div> 
         <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard/></div> 
         <div className="bg-[#111827] flex justify-center container mx-auto"><Footer/></div>
