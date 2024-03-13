@@ -14,12 +14,16 @@ const config: Config = {
       colors: {
         text_primary:'#111827',
         text_secondary:'#6B7280',
-        text_diabled:'#D1D5DB',
+        text_disabled:'#D1D5DB',
         text_inverted_primary:'#FFFFFF',
         text_brand_primary:'#163300',
         text_brand_secondary:'#9FE870',
         // Add more colors as needed
       },
+
+    spacing: {
+      vw10: "10vw",
+    }
     },
   },
   plugins: [],
