@@ -96,7 +96,7 @@ export default function HaveAQuestion() {
             {/* Button css */}
 
           <button type="button" 
-            className="text-white border-[2px] bg-W focus:ring-2 focus:outline-none font-medium rounded-md text-sm px-16 py-2.5 sm:px-[205px] lg:px-[210px]  sm:py-3.5 text-center inline-flex items-center dark:bg-black  border-black mt-4 "> 
+            className="text-white border-[2px] bg-W focus:ring-2 focus:outline-none font-medium rounded-md text-sm py-2 px-8 sm:px-[200px] sm:py-2 md:py-2 md:px-[225px] lg:px-[225px]  text-center inline-flex items-center dark:bg-black  border-black mt-4 "> 
              Send Message
 
              {/* Icon css */}
