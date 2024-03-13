@@ -23,7 +23,7 @@ export default function MainContent() {
           />
           {/* Get Susdev OS Button */}
           <button
-            className="block lg:inline-block mx-auto lg:mx-0 lg:absolute lg:right-1 h-8 lg:h-14 w-fit rounded-full font-medium bg-slate-900 text-sm lg:text-xl text-white mt-5 lg:mt-0 lg:mr-1 px-2 lg:p-4"
+            className="block lg:inline-block mx-auto lg:mx-0 lg:absolute lg:right-1 h-8 lg:h-14 w-fit rounded-full font-medium bg-slate-900 text-sm lg:text-xl text-white mt-5 lg:mt-0 lg:mr-1 px-2 lg:p-4 hover:bg-slate-800"
             type="submit"
           >
             GET SUSDEV-OS
