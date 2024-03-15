@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import ClientForm from '@/components/ClientForm';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
-import CaseCard from "../components/CaseCard"
+import CaseCard from "../components/CaseCard/Index"
 import GridCardStack from '../components/GridCardStack'; 
 import NavBar from '@/components/NavBar';
 
