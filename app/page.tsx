@@ -14,6 +14,9 @@ import NavBar from '@/components/NavBar';
 import Logos from '@/components/Logos/index';
 import MainContent from '@/components/MainContent';
 
+
+>>>>>>>>> Temporary merge branch 2
+
 export default async function Page() {
   const { user } = await validateRequest();
   if (!user) {
