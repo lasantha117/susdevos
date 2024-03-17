@@ -7,9 +7,7 @@ import Footer from '@/components/Footer/Footer';
 
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
-import CaseCard from "../components/CaseCard/Index"
-import GridCardStack from '../components/GridCardStack'; 
-// import Header from '@/components/Header/Header';
+import CaseCard from "@/components/CaseCard"
 import NavBar from '@/components/NavBar';
 import Logos from '@/components/Logos/index';
 import PartneringContent from '@/components/PartneringContent';
