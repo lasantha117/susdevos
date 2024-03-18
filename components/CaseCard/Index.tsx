@@ -1,8 +1,5 @@
 import Image from 'next/image';
 import { Button } from 'react-aria-components';
-
-
-
 import Card from './CCard';
 
 
