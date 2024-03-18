@@ -20,10 +20,6 @@ const config: Config = {
         text_brand_secondary:'#9FE870',
         // Add more colors as needed
       },
-
-    spacing: {
-      vw10: "10vw",
-    }
     },
   },
   plugins: [],
