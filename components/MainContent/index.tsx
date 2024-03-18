@@ -16,22 +16,6 @@ export default function MainContent() {
           Empower Climate-Smart Development with Real-Time Data, AI, and GIS for
           Public and Private Sector Projects.
         </h2>
-        {/* Get SusDev OS Form */}
-        {/* <form className="relative bg-zinc-100 rounded-full text-md lg:text-2xl lg:leading-8 shadow-lg mx-auto p-1.5 lg:p-2 h-10 w-64 lg:h-[72px] lg:w-[643px]">
-          <input
-            className="outline-none placeholder-gray-500  font-medium text-center text-slate-900 bg-zinc-100 rounded-full text-sm lg:text-xl lg:h-14 w-full lg:w-2/3 lg:p-4"
-            type="text"
-            placeholder="Enter your email to join the wait list"
-          /> */}
-          {/* Get Susdev OS Button */}
-          {/* <button
-            className="block lg:inline-block mx-auto lg:mx-0 lg:absolute lg:right-1 h-8 lg:h-14 w-fit rounded-full font-medium bg-slate-900 text-sm lg:text-xl text-white mt-5 lg:mt-0 lg:mr-1 px-2 lg:p-4 hover:bg-slate-800"
-            type="submit"
-          >
-            GET SUSDEV-OS
-          </button>
-        </form> */}
-        {/* The new Searc Bar */}
         <SearchBar />
       </div>
     </div>
