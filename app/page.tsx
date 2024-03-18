@@ -7,12 +7,11 @@ import Footer from '@/components/Footer/Footer';
 
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
-import CaseCard from "../components/CaseCard/Index"
-import GridCardStack from '../components/GridCardStack'; 
-// import Header from '@/components/Header/Header';
+import CaseCard from "@/components/CaseCard"
 import NavBar from '@/components/NavBar';
 import Logos from '@/components/Logos/index';
 import MainContent from '@/components/MainContent';
+import PartneringContent from '@/components/PartneringContent';
 
 
 >>>>>>>>> Temporary merge branch 2
@@ -44,6 +43,7 @@ export default async function Page() {
           <div className="bg-blue-300"><AboutCard/></div>
           <div><CaseCard/></div> 
         <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard/></div> 
+        <div><PartneringContent/></div>
         <div className="bg-[#111827] flex justify-center container mx-auto"><Footer/></div>
         </div>
       </div>
