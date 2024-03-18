@@ -4,15 +4,13 @@ import ClientForm from '@/components/ClientForm';
 import ButtonCard from '@/components/ButtonCard';
 import NonButtonCard from '@/components/NonButtonCard';
 import Footer from '@/components/Footer/Footer';
-
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
-import CaseCard from "../components/CaseCard/Index"
-import GridCardStack from '../components/GridCardStack'; 
-// import Header from '@/components/Header/Header';
+import CaseCard from "@/components/CaseCard"
 import NavBar from '@/components/NavBar';
 import HaveAQuestion from '@/components/HaveAQuestion';
 import Logos from '@/components/Logos/index';
+import MainContent from '@/components/MainContent';
 import PartneringContent from '@/components/PartneringContent';
 
 
@@ -23,9 +21,8 @@ export default async function Page() {
     return redirect('/login');
   }
   return (
-
     // The main div
-    <div> 
+    <div>
       <div className="grid grid-rows-layout h-screen">
         <div className="bg-gray-100 p-4">
           <h1>Hi, {user.username}!</h1>
@@ -36,16 +33,34 @@ export default async function Page() {
             </ClientForm>
           </div>
         </div>
+        {/* Home Page */}
         <div className="grid grid-cols-layout flex-grow">
-          {/* <div className="bg-blue-100"><Header/></div> */}
-          <div className="bg-blue-100"><NavBar/></div>
-          <div className="bg-white"><Logos/></div>
-          <div className="bg-blue-300"><AboutCard/></div>
-          <div><HaveAQuestion/></div>
-          <div><CaseCard/></div> 
-        <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard/></div> 
-        <div><PartneringContent/></div>
-        <div className="bg-[#111827] flex justify-center container mx-auto"><Footer/></div>
+          {/* Navigation Bar */}
+          <div className="bg-blue-100"><NavBar /></div>
+          {/* Main Title Component With Search Bar */}
+          <div className="bg-teal-100"><MainContent /></div>
+          {/* SusDev OS Main Components */}
+          <div className="bg-blue-300">SusDev OS Main Components</div>
+          {/* Logo Carousal */}
+          <div className="bg-white"><Logos /></div>
+          {/* About SusDev Component */}
+          <div className="bg-blue-300"><AboutCard /></div>
+          {/* Question Form Component */}
+          <div><HaveAQuestion /></div>
+          {/* Problem-Solution Layout Component */}
+          <div className="bg-blue-300">Problem-Solution Layout Component</div>
+          {/* Case Sudies Component */}
+          <div><CaseCard /></div>
+          {/* Benefits Component */}
+          <div className="bg-blue-300">Benefits Component</div>
+          {/* Simple Text Banner */}
+          <div className="bg-red-300">Simple Text Banner</div>
+          {/* And More Section */}
+          <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard /></div>
+          {/* Partnering Banner */}
+          <div><PartneringContent /></div>
+          {/* Footer*/}
+          <div className="bg-[#111827] flex justify-center"><Footer /></div>
         </div>
       </div>
     </div>
