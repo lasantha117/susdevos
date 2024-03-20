@@ -6,7 +6,7 @@ import NonButtonCard from '@/components/NonButtonCard';
 import Footer from '@/components/Footer/Footer';
 import { lucia, validateRequest } from '@/modules/auth/lucia';
 import AboutCard from "../components/AboutCard"
-import CaseCard from "@/components/CaseCard/Index"
+import CaseCard from "@/components/CaseCard"
 import NavBar from '@/components/NavBar';
 import HaveAQuestion from '@/components/HaveAQuestion';
 import Logos from '@/components/Logos/index';
