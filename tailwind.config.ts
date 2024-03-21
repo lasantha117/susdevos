@@ -21,9 +21,7 @@ const config: Config = {
         // Add more colors as needed
       },
 
-    spacing: {
-      vw10: "10vw",
-    }
+    spacing: {}
     },
   },
   plugins: [],

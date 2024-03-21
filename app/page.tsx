@@ -42,7 +42,7 @@ export default async function Page() {
           {/* SusDev OS Main Components */}
           <div className="bg-blue-300">SusDev OS Main Components</div>
           {/* Logo Carousal */}
-          <div className="bg-white"><Logos /></div>
+          <div><Logos /></div>
           {/* About SusDev Component */}
           <div className="bg-blue-300"><AboutCard /></div>
           {/* Question Form Component */}
@@ -52,15 +52,15 @@ export default async function Page() {
           {/* Case Sudies Component */}
           <div><CaseCard /></div>
           {/* Benefits Component */}
-          <div className="bg-blue-300">Benefits Component</div>
+          <div className="bg-blue-300"><NonButtonCard /></div>
           {/* Simple Text Banner */}
           <div className="bg-red-300">Simple Text Banner</div>
           {/* And More Section */}
-          <div className="bg-green-200 w-full flex justify-center items-center container mx-auto px-vw10 py-5"><ButtonCard /></div>
+          <div><ButtonCard /></div>
           {/* Partnering Banner */}
           <div><PartneringContent /></div>
           {/* Footer*/}
-          <div className="bg-[#111827] flex justify-center"><Footer /></div>
+          <div><Footer /></div>
         </div>
       </div>
     </div>

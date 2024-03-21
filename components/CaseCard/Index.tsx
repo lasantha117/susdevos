@@ -32,10 +32,11 @@ const Case: React.FC = () => {
     <>
       <div className="flex-none mx-auto justify-center mt-24">
         <h1 className="flex-none text-2xl lg:text-5xl font-s-[48px] text-center font-bold font-family:outfit">
-      Case Studies 
+          Case Studies 
         </h1>
+
         <p className="font-medium mb-10 mx-6 px-6 mt-6 md:px-8 lg:px-10 md:mt-8 lg:mt-10 md:mx-24 lg:mx-32 xl:mx-56 text-center lg:text-[24px]  sm:text-[24px] font-family:outfit">
-     Exploring Real-World Success Stories: How SusDev-OS Drives Environmental Impact and Sustainability
+          Exploring Real-World Success Stories: How SusDev-OS Drives Environmental Impact and Sustainability
         </p>
 
         <div className="grid grid-cols-1 2xl:grid-cols-3 mx-24 gap-6">
