@@ -40,7 +40,7 @@ const SolvesTheProblem: React.FC = () => {
             </h2>
             <p className="mt-8 lg:text-[24px] md:text-1xl sm:text-1xl text-black text-bold md:mt-6 text-center ">
               In an era where global 🌍 climate goals hang at a critical tipping
-              point, the challenge lies in our inabilityto truly assess,
+              point, the challenge lies in our inability to truly assess,
               mitigate, monitor and restore the climate impact of 🏗 development
               projects.
             </p>
