@@ -36,7 +36,7 @@ export default async function Page() {
           {/* Navigation Bar */}
           <div className="bg-blue-100"><NavBar /></div>
           {/* Main Title Component With Search Bar */}
-          <div className="bg-teal-100"><MainContent /></div>
+          <div className="bg-white"><MainContent /></div>
           {/* SusDev OS Main Components */}
           <div className="bg-blue-300">SusDev OS Main Components</div>
           {/* Logo Carousal */}

@@ -36,7 +36,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <div className="flex-none mx-auto justify-center bg-white py-20">
+      <div className="container flex-none mx-auto justify-center bg-white py-20 lg:px-20">
         <h1 className="flex-none text-2xl lg:text-5xl font-semibold text-center">
           Why SusDev OS
         </h1>
