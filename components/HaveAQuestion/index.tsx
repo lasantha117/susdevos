@@ -16,7 +16,8 @@ export default function HaveAQuestion() {
           {/* Form */}
 
           <form action="#" method="POST" className="mx-auto max-w-xl">
-            <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6  ">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-6  ">
+
               {/* Your name */}
               <div className="sm:col-span-3">
                 <label
@@ -38,7 +39,7 @@ export default function HaveAQuestion() {
               {/* Your email */}
               <div className="sm:col-span-3">
                 <label
-                  htmlFor="last-name"
+                  htmlFor="email"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 ></label>
                 <div className="mt-2">
@@ -96,7 +97,7 @@ export default function HaveAQuestion() {
             {/* Button css */}
 
           <button type="button" 
-            className="text-white border-[2px] bg-W focus:ring-2 focus:outline-none font-medium rounded-md text-sm py-2 px-8 sm:px-[200px] sm:py-2 md:py-2 md:px-[225px] lg:px-[225px]  text-center inline-flex items-center dark:bg-black  border-black mt-4 "> 
+            className="text-white border-[2px] bg-W focus:ring-2 focus:outline-none font-medium rounded-md text-sm py-2 px-8 sm:px-[300px] sm:py-2 md:py-2 md:px-[225px] lg:px-[225px]  text-center inline-flex items-center dark:bg-black  border-black mt-4 bg-black "> 
              Send Message
 
              {/* Icon css */}

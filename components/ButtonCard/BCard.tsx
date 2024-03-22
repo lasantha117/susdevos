@@ -6,10 +6,10 @@ interface CardProps {
   title: string;
   content: string;
   image: string;
-  button: JSX.Element;
+  buttonLogic: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
+const Card: React.FC<CardProps> = ({ title, content,image,buttonLogic }) => {
   return (
     //Adding top image in the card
     <div className="rounded-3xl /*border-4 border-black*/ border-solid  p-4 h-full  bg-gray-50">  
@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
       </div>
       {/*Adding below button*/}
       <div className="flex justify-end items-end">
-          <div  className=" h-12 w-12  flex items-center justify-center rounded-full">
+        {buttonLogic  && (<button  className=" h-12 w-12  flex items-center justify-center rounded-full">
           <Image
             src="/Images/ButtonCard/CircledUpRight.png"
             alt="Button Image"
@@ -39,8 +39,8 @@ const Card: React.FC<CardProps> = ({ title, content,image,button }) => {
             className="rounded-full hover:bg-black"
             style={{ objectFit: 'contain', width: '100%', height: '100%' }}
           />
-              {button}
-          </div>
+          </button>)}
+          
       </div>
     </div>
   );
