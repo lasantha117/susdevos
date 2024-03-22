@@ -51,11 +51,11 @@ export default async function Page() {
           {/* Case Sudies Component */}
           <div><CaseCard /></div>
           {/* Benefits Component */}
-          {/* <div className="bg-blue-300"><NonButtonCard /></div> */}
+          <div className="bg-blue-300"><NonButtonCard /></div>
           {/* Simple Text Banner */}
           <div className="bg-red-300"><TextBanner /></div>
           {/* And More Section */}
-          {/* <div><ButtonCard /></div> */}
+          <div><ButtonCard /></div>
           {/* Partnering Banner */}
           <div><PartneringContent /></div>
           {/* Footer*/}
