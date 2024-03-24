@@ -2,9 +2,9 @@ import SearchBar from '@/components/MainContent/SearchBar'
 
 export default function MainContent() {
   return (
-    <div className="bg-white py-20 lg:py-28 mx-auto">
+    <div className="container py-20 lg:px-20 lg:py-28 mx-auto">
       {/* Main Content Container */}
-      <div className="flex flex-col justify-center px-12 lg:px-20">
+      <div className="flex flex-col justify-center px-12 lg:px-20 bg-white">
         {/* Main Heading */}
         <h1 className="text-2xl lg:text-[54px] text-slate-900 text-center font-bold leading-7 lg:leading-[61px]">
           Open-Source Web-OS for Managing{' '}
