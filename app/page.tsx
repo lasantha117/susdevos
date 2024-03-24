@@ -12,7 +12,9 @@ import HaveAQuestion from '@/components/HaveAQuestion';
 import Logos from '@/components/Logos/index';
 import MainContent from '@/components/MainContent';
 import PartneringContent from '@/components/PartneringContent';
+import SolvesTheProblem from '@/components/SolvesTheProblem';
 import TextBanner from '@/components/TextBanner';
+
 
 export default async function Page() {
   const { user } = await validateRequest();
@@ -47,7 +49,7 @@ export default async function Page() {
           {/* Question Form Component */}
           <div><HaveAQuestion /></div>
           {/* Problem-Solution Layout Component */}
-          <div className="bg-blue-300">Problem-Solution Layout Component</div>
+          <div className="bg-white"><SolvesTheProblem/></div>
           {/* Case Sudies Component */}
           <div><CaseCard /></div>
           {/* Benefits Component */}
