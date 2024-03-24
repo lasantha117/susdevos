@@ -23,7 +23,7 @@ const SolvesTheProblem: React.FC = () => {
 
           <div className="lg:ml-36 ">
             <Image
-              src="/Images/SolvesTheProblem/Frame 11.png"
+              src="/Images/SolvesTheProblemCard/frame_11.png"  
               alt=""
               width={900}
               height={900}
@@ -63,7 +63,7 @@ const SolvesTheProblem: React.FC = () => {
           {/* order-4 */}
           <div className=" lg:mr-10 sm:order-last mt-10">
             <Image
-              src="/Images/SolvesTheProblem/Frame 12.png"
+              src="/Images/SolvesTheProblemCard/frame_12.png"
               alt=""
               width={900}
               height={900}
