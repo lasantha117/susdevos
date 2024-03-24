@@ -13,7 +13,7 @@ import Logos from '@/components/Logos/index';
 import MainContent from '@/components/MainContent';
 import PartneringContent from '@/components/PartneringContent';
 import SolvesTheProblem from '@/components/SolvesTheProblem';
-
+import TextBanner from '@/components/TextBanner';
 
 
 export default async function Page() {
@@ -39,7 +39,7 @@ export default async function Page() {
           {/* Navigation Bar */}
           <div className="bg-blue-100"><NavBar /></div>
           {/* Main Title Component With Search Bar */}
-          <div className="bg-teal-100"><MainContent /></div>
+          <div className="bg-white"><MainContent /></div>
           {/* SusDev OS Main Components */}
           <div className="bg-blue-300">SusDev OS Main Components</div>
           {/* Logo Carousal */}
@@ -55,7 +55,7 @@ export default async function Page() {
           {/* Benefits Component */}
           <div className="bg-blue-300"><NonButtonCard /></div>
           {/* Simple Text Banner */}
-          <div className="bg-red-300">Simple Text Banner</div>
+          <div className="bg-red-300"><TextBanner /></div>
           {/* And More Section */}
           <div><ButtonCard /></div>
           {/* Partnering Banner */}

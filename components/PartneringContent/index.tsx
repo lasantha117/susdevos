@@ -1,12 +1,19 @@
+import Image from "next/image";
+
+
+
 export default function PartneringContent() {
   return (
     <div className="bg-slate-900 w-full lg:h-[712px]">
         {/* Partnering Content Container */}
       <div className="mx-auto py-10 lg:py-20">
         {/* Partering Image */}
-        <img
-          className="rounded-full size-20 lg:w-[160px] lg:h-[160px] mx-auto "
+        <Image
+          className="rounded-full size-20 lg:w-[160px] lg:h-[160px] mx-auto"
           src="/Images/PartneringContent/partneringImage.webp"
+          alt="Partnering Image"
+          width={160}
+          height={160}
         />
 
         {/* Heading */}
