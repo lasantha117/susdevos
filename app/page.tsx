@@ -12,6 +12,7 @@ import HaveAQuestion from '@/components/HaveAQuestion';
 import Logos from '@/components/Logos/index';
 import MainContent from '@/components/MainContent';
 import PartneringContent from '@/components/PartneringContent';
+import TextBanner from '@/components/TextBanner';
 
 export default async function Page() {
   const { user } = await validateRequest();
@@ -52,7 +53,7 @@ export default async function Page() {
           {/* Benefits Component */}
           <div className="bg-blue-300"><NonButtonCard /></div>
           {/* Simple Text Banner */}
-          <div className="bg-red-300">Simple Text Banner</div>
+          <div className="bg-red-300"><TextBanner /></div>
           {/* And More Section */}
           <div><ButtonCard /></div>
           {/* Partnering Banner */}
