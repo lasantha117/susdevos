@@ -43,7 +43,7 @@ const cardData = [
   ];
     return (
       //call the Card.tsx as a grid
-      <div className="bg-green-200 w-full flex justify-center items-center mx-auto px-16 py-5">
+      <div className="bg-white container w-full flex justify-center items-center mx-auto px-16 py-5">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 "> 
           {cardData.map((card, index) => (
             <Card key={index} title={card.title} content={card.content} image={card.image} buttonLogic={card.button} />
