@@ -12,9 +12,9 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-white"> {/* Navigation bar container */}
+    <nav className="bg-white container"> {/* Navigation bar container */}
       {/* Container for logo and other elements */}
-      <div className="max-w-7xl xl:mx-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-4 sm:px-6">
         {/* Flex container for alignment */}
         <div className="flex items-center justify-between h-20">
           {/* Flex container for logo */}
