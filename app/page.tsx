@@ -37,7 +37,7 @@ export default async function Page() {
         {/* Home Page */}
         <div className="grid grid-cols-layout flex-grow">
           {/* Navigation Bar */}
-          <div><NavBar /></div>
+          <div className='border-b border-text-disabled'><NavBar /></div>
           {/* Main Title Component With Search Bar */}
           <div><MainContent /></div>
           {/* SusDev OS Main Components */}
