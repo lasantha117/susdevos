@@ -36,7 +36,7 @@ const About: React.FC = () => {
 
   return (
     <>
-      <div className="container flex-none mx-auto justify-center bg-white py-20 lg:px-20">
+      <div className="container flex-none mx-auto justify-center bg-white py-10 lg:py-20 lg:px-20">
         <h1 className="flex-none text-2xl lg:text-5xl font-semibold text-center">
           Why SusDev OS
         </h1>
@@ -50,7 +50,7 @@ const About: React.FC = () => {
           automation tools needed for climate-smart development.
         </p>
 
-        <div className="grid grid-cols-1 xl:grid-cols-3 mx-24 gap-6  mb-20">
+        <div className="grid grid-cols-1 xl:grid-cols-3 mx-24 gap-6">
         {cardDataArray.map((cardData, index) => (
           <Card key={index} cardData={cardData} />
         ))}

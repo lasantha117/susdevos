@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({ cardData }) => {
           <p className={`mx-4 mt-4 text-md lg:mx-6 lg:mt-8 font-medium lg:text-2xl lg:mb-5 ${pCn}`}>
             {content}
           </p>
-          <Button className={`text-sm font-medium outline-none w-24 h-8 mb-4 mt-4 mx-4 sm:text-sm sm:w-24 sm:h-8 sm:mb-6 sm:mt-6 sm:mx-4 lg:w-32 lg:h-11 lg:mb-8 lg:mt-8 rounded-full border-none lg:mx-6 ${buttonCn}`}>
+          <Button className={`text-sm font-medium outline-none w-24 h-8 mt-4 mb-4 mx-4 sm:text-sm sm:w-24 sm:h-8 sm:mb-6 sm:mt-6 sm:mx-4 lg:w-32 lg:h-11 lg:mb-8 lg:mt-8 rounded-full border-none lg:mx-6 ${buttonCn}`}>
             Read More
           </Button>
         </div>
