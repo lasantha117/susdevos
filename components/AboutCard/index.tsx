@@ -14,7 +14,7 @@ const About: React.FC = () => {
         'How SusDev OS resolves typical issues facing climate impact mitigation action',
       cardCn: 'shadow-lg bg-teal-400 ',
       pCn: 'text-slate-950',
-      buttonCn: 'text-white bg-slate-950 hover:bg-white hover:text-slate-950',
+      buttonCn: 'text-white bg-slate-950 hover:bg-slate-800',
     },
     {
       imgSrc: '/Images/AboutCard/image02.webp',
@@ -22,7 +22,7 @@ const About: React.FC = () => {
         'Are you from the private sector looking to de-carbonize? We have you covered',
       cardCn: 'bg-slate-950 shadow-lg',
       pCn: 'text-gray-100',
-      buttonCn: 'bg-white text-slate-950 hover:bg-slate-500 hover:text-white',
+      buttonCn: 'bg-white text-slate-950 hover:bg-slate-300',
     },
     {
       imgSrc: '/Images/AboutCard/image03.webp',
@@ -30,7 +30,7 @@ const About: React.FC = () => {
         'AI-powered insights for UN-FCCC, NDC, UN-SDG, SBTi, Sendai framework compliance',
       cardCn: 'bg-orange-300 shadow-lg',
       pCn: 'text-slate-950',
-      buttonCn: 'text-white bg-slate-950 hover:bg-white hover:text-slate-950',
+      buttonCn: 'text-white bg-slate-950 hover:bg-slate-800',
     },
   ];
 
