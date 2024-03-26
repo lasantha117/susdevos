@@ -2,11 +2,11 @@
 
 export default function HaveAQuestion() {
   return (
-    <div className=" bg-teal-400 flex-none justify-center p-4 px-6 py-24 sm:py-32 lg:px-8">
+    <div className=" bg-teal-400 flex-none justify-center p-4 px-6   lg:px-8 ">
       <div className="grid grid-cols-1 2xl:grid-cols-1  gap-6 flex-none mx-auto justify-center mt-auto">
         <div className="bg-white mx-auto max-w-2xl text-center mt-16 rounded-[32px] p-8">
           <h2 className="  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-16">
-            Have a question?{' '}
+            Have a question?
           </h2>
           <p className=" text-lg leading-8 text-gray-600 text-bold p-6 text-center">
             We strive to respond to all inquiries promptly. You can expect to
@@ -97,7 +97,7 @@ export default function HaveAQuestion() {
             {/* Button css */}
 
           <button type="button" 
-            className="text-white border-[2px] bg-W focus:ring-2 focus:outline-none font-medium rounded-md text-sm py-2 px-8 sm:px-[300px] sm:py-2 md:py-2 md:px-[225px] lg:px-[225px]  text-center inline-flex items-center dark:bg-black  border-black mt-4 bg-black "> 
+            className="text-white border-[2px] bg-W focus:ring-2  font-medium rounded-md text-sm py-2 px-8 sm:px-[300px] sm:py-2 md:py-2 md:px-[225px] lg:px-[225px]  text-center inline-flex items-center dark:bg-black  border-black mt-4 bg-black hover:bg-teal-500 "> 
              Send Message
 
              {/* Icon css */}
