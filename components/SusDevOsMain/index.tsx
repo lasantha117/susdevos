@@ -5,7 +5,7 @@ import Image from 'next/image';
 const SusDev: React.FC = () => {
   return (
     <div className=" flex flex-col sm:flex-row sm:w-full h-80 mb-28 mx-2">
-      {/* Right Content */}
+      {/* Left Content */}
       <div className='w-full sm:w-1/3 h-full'>
         <div className='h-1/2'>
           <h1 className='pt-6 text-center sm:pl-28 text-xl font-bold mb-2 sm:h-20'>Realtime data from development projects</h1>
@@ -26,7 +26,7 @@ const SusDev: React.FC = () => {
             style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           />
       </div>
-      {/* Left Content */}
+      {/* Right Content */}
       <div className='w-full sm:w-1/3 h-full'>
       <div className='h-1/2'>
           <h1 className='text-center pt-6 sm:pr-28 text-xl font-bold mb-2 sm:h-20 '>Workflow lifecycle management</h1>
