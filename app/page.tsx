@@ -38,25 +38,25 @@ export default async function Page() {
         {/* Home Page */}
         <div className="grid grid-cols-layout flex-grow">
           {/* Navigation Bar */}
-          <div className="bg-blue-100"><NavBar /></div>
+          <div className='border-b border-text-disabled'><NavBar /></div>
           {/* Main Title Component With Search Bar */}
-          <div className="bg-white"><MainContent /></div>
+          <div><MainContent /></div>
           {/* SusDev OS Main Components */}
           <div className="bg-white"><SusDev/></div>
           {/* Logo Carousal */}
           <div><Logos /></div>
           {/* About SusDev Component */}
-          <div className="bg-blue-300"><AboutCard /></div>
+          <div><AboutCard /></div>
           {/* Question Form Component */}
           <div><HaveAQuestion /></div>
           {/* Problem-Solution Layout Component */}
-          <div className="bg-white"><SolvesTheProblem/></div>
+          <div><SolvesTheProblem/></div>
           {/* Case Sudies Component */}
           <div><CaseCard /></div>
           {/* Benefits Component */}
           <div><NonButtonCard /></div>
           {/* Simple Text Banner */}
-          <div className="bg-red-300"><TextBanner /></div>
+          <div><TextBanner /></div>
           {/* And More Section */}
           <div><ButtonCard /></div>
           {/* Partnering Banner */}
