@@ -18,7 +18,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
     message: '',
   })
   const [selectedCountryCode, setSelectedCountryCode] = useState('+1');
-  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState<Array<string>>([]);
 
   const handleCountryCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountryCode(e.target.value);
