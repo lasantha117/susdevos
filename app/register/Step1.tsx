@@ -24,6 +24,17 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Create a new FormData object
+    const formData  = new FormData();
+
+    // Append the form values to the FormData object
+    // Object.entries method is used to iterate over the key-value pairs of the formData object
+    Object.entries(formData).forEach(([key, value]) => {
+      // For each key-value pair, the following method is called to append data to FormData 
+      formData.append(key, value);
+    });
+
     const response = await onSubmit(null, formData); // Assuming `oldState` is not required and can be null
     // Handle response or errors
     if (response && response.error) {
