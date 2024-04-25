@@ -69,7 +69,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
               type="password" placeholder='Re-enter your password' onChange={handleChange}
             />
           </TextField>
-          <Button onClick={onNext}
+          <Button onPressEnd={onNext}
             className="bg-black hover:bg-gray-300 active:bg-blue-500 rounded p-2 outline-none focus:ring-2 focus:ring-offset-1 transition text-white hover:text-black hover:font-semibold"
             type="submit"
           >
