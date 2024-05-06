@@ -5,7 +5,6 @@ import { redirect } from 'next/navigation';
 import { createSessionCookie, login } from '@/modules/auth';
 
 export async function onSubmit(oldState: any, formData: FormData) {
-  
   try {
     const userId = await login(Object.fromEntries(formData));
     const cookie = await createSessionCookie(userId);
