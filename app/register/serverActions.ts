@@ -1,10 +1,11 @@
+'use server';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 import { createSessionCookie, register } from '@/modules/auth';
 
 export async function onSubmit(oldState: any, formData: FormData) {
-  'use server';
+  
   try {
     const userId = await register(Object.fromEntries(formData));
     const cookie = await createSessionCookie(userId);
@@ -14,3 +15,4 @@ export async function onSubmit(oldState: any, formData: FormData) {
   }
   return redirect('/'); // NextJs uses errors for redirects
 }
+
