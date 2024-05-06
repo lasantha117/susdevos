@@ -55,7 +55,6 @@ const ForgotPassword1: React.FC<Step1Props> = ({
               {...register('email')}
               className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
               placeholder='Enter your email'
-              required
             />
             {errors?.email && (
               <span className="text-red-500">{errors.email.message}</span>

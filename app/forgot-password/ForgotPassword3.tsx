@@ -13,10 +13,7 @@ interface Step3Props {
   onChange: (data: { [key: string]: string }) => void;
 }
 
-const ForgotPassword3: React.FC<Step3Props> = ({
-  onNext,
-  onChange,
-}) => {
+const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
   const {
     register,
     handleSubmit,
@@ -58,10 +55,11 @@ const ForgotPassword3: React.FC<Step3Props> = ({
                 {...register('newPassword')}
                 className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
-                required
               />
               {errors?.newPassword && (
-                <span className="text-red-500">{errors.newPassword.message}</span>
+                <span className="text-red-500">
+                  {errors.newPassword.message}
+                </span>
               )}
             </TextField>
 
@@ -71,10 +69,11 @@ const ForgotPassword3: React.FC<Step3Props> = ({
                 {...register('confirmPassword')}
                 className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
-                required
               />
               {errors?.confirmPassword && (
-                <span className="text-red-500">{errors.confirmPassword.message}</span>
+                <span className="text-red-500">
+                  {errors.confirmPassword.message}
+                </span>
               )}
             </TextField>
 
