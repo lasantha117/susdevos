@@ -53,7 +53,8 @@ const ForgotPassword1: React.FC<Step1Props> = ({
             <Label className="font-medium">Email</Label>
             <Input
               {...register('email')}
-              className="border-2 border-slate-600 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+              className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+              placeholder='Enter your email'
               required
             />
             {errors?.email && (
