@@ -1,8 +1,12 @@
 // Step1.tsx
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button, Input, Label, Link, TextField } from 'react-aria-components';
-import { onSubmit } from './serverActions';
+import { onSubmit } from './serverActions'; 
 import Image from 'next/image';
+import { useForm, type FieldValues } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { RegisterSchemaStep1, RegisterDataStep1 }  from './ZodValidation';
+
 
 interface Step1Props {
   onNext: () => void;
@@ -10,40 +14,18 @@ interface Step1Props {
 }
 
 const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    reEnterPassword: '',
+ 
+  const { register, handleSubmit ,formState:{errors,} } = useForm<RegisterDataStep1>({
+    resolver: zodResolver(RegisterSchemaStep1),
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    onChange({ ...formData, [name]: value }); // Update the overall form data
-  };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmit = async (data: FieldValues) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    onNext()
+    
+  }
 
-    // Create a new FormData object
-    const formData  = new FormData();
-
-    // Append the form values to the FormData object
-    // Object.entries method is used to iterate over the key-value pairs of the formData object
-    Object.entries(formData).forEach(([key, value]) => {
-      // For each key-value pair, the following method is called to append data to FormData 
-      formData.append(key, value);
-    });
-
-    const response = await onSubmit(null, formData); // Assuming `oldState` is not required and can be null
-    // Handle response or errors
-    if (response && response.error) {
-      console.error('Error:', response.error);
-    } else {
-      // Proceed to the next step
-      onNext();
-    }
-  };
 
   return (
     <div className="flex justify-center container p-32">
@@ -61,28 +43,43 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
           <p className='text-base'>something should write here</p>
         </div>
       
-        <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4' method='POST'>
           <TextField className="flex flex-col gap-2" name="email">
             <Label>Email*</Label>
-            <Input className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" type='email'  placeholder='Enter your Email' onChange={handleChange} />
+            <Input 
+            { ...register('email')}
+            className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" type='email'  placeholder='Enter your Email' />
+            {
+              errors?.email && <p className='text-red-500'>{errors.email.message}</p>
+            }
           </TextField>
           <TextField className="flex flex-col gap-2" name="password">
             <Label>Password*</Label>
             <Input
+            { ...register('password')}
               className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg"
-              type="password" placeholder='Create a password' onChange={handleChange}
-            /><p className='text-gray-400'>Must be at least 8 characters.</p>
+              type="password" placeholder='Create a password'
+            />
+          {
+            errors?.password && <p className='text-red-500'>{errors.password.message}</p>
+          }
+            <p className='text-gray-400'>Must be at least 8 characters.</p>
           </TextField>
           <TextField className="flex flex-col gap-2" name="reEnterPassword">
             <Label>Re-enter Password*</Label>
             <Input
+              { ...register('confirmPassword')}
               className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg"
-              type="password" placeholder='Re-enter your password' onChange={handleChange}
+              type="password" placeholder='Re-enter your password' 
             />
+          {
+            errors?.confirmPassword && <p className='text-red-500'>{errors.confirmPassword.message}</p>
+          }
           </TextField>
-          <Button onPressEnd={onNext}
+          <Button 
             className="bg-black hover:bg-gray-300 active:bg-blue-500 rounded p-2 outline-none focus:ring-2 focus:ring-offset-1 transition text-white hover:text-black hover:font-semibold"
             type="submit"
+          
           >
             Get started
           </Button>
@@ -90,7 +87,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
             <p className='pr-1 text-gray-400'>Already have an account? </p>
             <Link
               className="text-black font-semibold outline-none hover:border-b border-blue-600 hover:text-blue-500"
-              href="/login"
+              href='/login'
             >
               Log in
             </Link>

@@ -3,17 +3,13 @@
 import { useState } from 'react';
 
 interface PhoneNumberInputProps {
-  formData: { phoneNumber: string };
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  selectedCountryCode: string;
-  handleCountryCodeChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-}
+	register: any; // Register function from react-hook-form
+	error?: any; // Error object from form validation
+  }
 
 const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
-  formData,
-  handleChange,
-  selectedCountryCode,
-  handleCountryCodeChange
+  register,
+  error,
 }) => {
   return (
     <div className="flex flex-col space-y-4">
@@ -21,11 +17,10 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
       <div className="flex">
         <select 
           id="countryCode" 
-          value={selectedCountryCode} 
-          onChange={handleCountryCodeChange} 
+          
           className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-t-2 border-b-2 border-l-2 rounded-l-lg"
         >
-          <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+        <option data-countryCode="DZ" value="213">Algeria (+213)</option>
 		<option data-countryCode="AD" value="376">Andorra (+376)</option>
 		<option data-countryCode="AO" value="244">Angola (+244)</option>
 		<option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
@@ -224,7 +219,7 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
 		<option data-countryCode="UG" value="256">Uganda (+256)</option>
 		<option data-countryCode="GB" value="44">UK (+44)</option>
 		<option data-countryCode="UA" value="380">Ukraine (+380)</option>
-		<option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+		<option data-countryCode="AE" value="971">UAE (+971)</option>
 		<option data-countryCode="UY" value="598">Uruguay (+598)</option>
 		<option data-countryCode="US" value="1">USA (+1)</option>
 		<option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
@@ -245,12 +240,16 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
           type="tel" 
           name="phoneNumber" 
           placeholder="+94 (555) 000-0000" 
-          value={formData.phoneNumber} 
-          onChange={handleChange} 
+          {...register} 
           className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-t-2 border-b-2 border-r-2 rounded-r-lg "
           style={{ color: 'black' }}
-        />
+		  />
       </div>
+		  {
+			error && (
+			   <p className="text-red-500 text-sm">{error.message}</p>
+			)
+		  }
     </div>
   );
 };
