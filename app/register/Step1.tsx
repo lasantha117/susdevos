@@ -52,7 +52,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
             <Label>Email*</Label>
             <Input
               {...register('email')}
-              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg"
+              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 border-slate-300 rounded-lg"
               type="email"
               placeholder="Enter your Email"
             />
@@ -64,7 +64,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
             <Label>Password*</Label>
             <Input
               {...register('password')}
-              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg"
+              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 border-slate-300 rounded-lg"
               type="password"
               placeholder="Create a password"
             />
@@ -76,7 +76,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
             <Label>Re-enter Password*</Label>
             <Input
               {...register('confirmPassword')}
-              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg"
+              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 border-slate-300 rounded-lg"
               type="password"
               placeholder="Re-enter your password"
             />
