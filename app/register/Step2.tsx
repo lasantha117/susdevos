@@ -15,11 +15,6 @@ interface Step2Props {
 }
 
 const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
-  // const [formData, setFormData] = useState({
-  //   organization: '',
-  //   phoneNumber: '',
-  //   message: '',
-  // })
 
   const { register, handleSubmit, formState: { errors } } = useForm<RegisterDataStep2>({
     resolver: zodResolver(RegisterSchemaStep2),
@@ -27,12 +22,6 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
 
   const [selectedCountryCode, setSelectedCountryCode] = useState('+1');
   const [selectedOptions, setSelectedOptions] = useState<Array<string>>([]);
-
-  // const handleCountryCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  //   setSelectedCountryCode(e.target.value);
-  //   // You can also pass the selected country code to the onChange handler if needed
-  //   onChange({ countryCode: e.target.value });
-  // };
 
   const handleOptionChange = (event: { target: { value: any; checked: any; }; }) => {
     const value = event.target.value;

@@ -1,7 +1,3 @@
-
-
-import { useState } from 'react';
-
 interface PhoneNumberInputProps {
 	register: any; // Register function from react-hook-form
 	error?: any; // Error object from form validation
