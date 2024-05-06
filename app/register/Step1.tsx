@@ -29,9 +29,9 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
 
   return (
     <div className="flex justify-center container p-32">
-      <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4 items-center">
-          <Image
+      <div className="relative flex flex-col gap-4 w-[360px]">
+        <div className='flex flex-col gap-4 items-center'>
+        <Image
             src="/Images/RegistrationForm/susdevosImage.png"
             alt="Register Image"
             width={50}
