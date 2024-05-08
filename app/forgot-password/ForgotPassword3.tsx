@@ -55,6 +55,7 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
                 {...register('newPassword')}
                 className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
+                placeholder='Enter new password'
               />
               {errors?.newPassword && (
                 <span className="text-red-500">
@@ -69,6 +70,7 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
                 {...register('confirmPassword')}
                 className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
+                placeholder='Confirm your password'
               />
               {errors?.confirmPassword && (
                 <span className="text-red-500">
