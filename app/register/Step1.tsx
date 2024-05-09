@@ -14,6 +14,13 @@ interface Step1Props {
 }
 
 const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    confirmPassword: ''
+
+  });
+
  
   const { register, handleSubmit ,formState:{errors,} } = useForm<RegisterDataStep1>({
     resolver: zodResolver(RegisterSchemaStep1),
@@ -24,7 +31,14 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     onNext()
     
-  }
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    onChange({ [name]: value });
+  }
+
 
 
   return (
@@ -48,7 +62,7 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
             <Label>Email*</Label>
             <Input 
             { ...register('email')}
-            className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" type='email'  placeholder='Enter your Email' />
+            className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" type='email'  placeholder='Enter your Email' value={formData.email} onChange={handleChange} />
             {
               errors?.email && <p className='text-red-500'>{errors.email.message}</p>
             }
