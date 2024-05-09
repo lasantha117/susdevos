@@ -28,17 +28,17 @@ export default function Page({
   const [usernameError, setUsernameError] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
+  const validate = (f: FormData) => {
     const formData = {
-      username: e.target.username.value,
-      password: e.target.password.value,
+      username: f.get('username'),
+      password: f.get('password'),
     };
     try {
       LoginScema.parse(formData);
       console.log('valid');
       setUsernameError('');
       setPasswordError('');
+      return true;
     } catch (e) {
       console.log(e);
       if (e instanceof ZodError) {
@@ -53,6 +53,7 @@ export default function Page({
       } else {
         console.error('Unknown error occurred:', e);
       }
+      return false;
     }
   };
   return (
@@ -74,8 +75,14 @@ export default function Page({
 
         <ClientForm
           className="flex flex-col gap-4"
-          action={onSubmit}
-          onSubmit={handleSubmit}
+          action={(err, formData) => {
+            const valid = validate(formData);
+            if (valid) {
+              return onSubmit(err, formData);
+            }
+
+            return { error: 'Validation Error.' };
+          }}
           initialState={{ error: '' }}
         >
           <TextField className="flex flex-col gap-2" name="username">
