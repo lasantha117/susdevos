@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import { useState } from 'react';
 import {
@@ -80,8 +81,8 @@ export default function Page({
           <TextField className="flex flex-col gap-2" name="username">
             <Label className="font-medium">Email or Username</Label>
             <Input
-              className="border-2 border-slate-600 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
-              required
+              className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+              placeholder="Enter your username"
             />
             {usernameError && (
               <span className="text-red-500">{usernameError}</span>
@@ -90,11 +91,13 @@ export default function Page({
           <TextField className="flex flex-col gap-2" name="password">
             <Label className="font-medium">Password</Label>
             <Input
-              className="border-2 border-slate-600 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+              className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
               type="password"
-              required
+              placeholder="Enter your password"
             />
-            {passwordError && <span className="text-red-500">{passwordError}</span>}
+            {passwordError && (
+              <span className="text-red-500">{passwordError}</span>
+            )}
           </TextField>
 
           <div className="flex flex-col lg:inline-flex items-center mb-4">

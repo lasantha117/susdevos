@@ -13,10 +13,7 @@ interface Step3Props {
   onChange: (data: { [key: string]: string }) => void;
 }
 
-const ForgotPassword3: React.FC<Step3Props> = ({
-  onNext,
-  onChange,
-}) => {
+const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
   const {
     register,
     handleSubmit,
@@ -56,12 +53,14 @@ const ForgotPassword3: React.FC<Step3Props> = ({
               <Label className="font-medium">New Password</Label>
               <Input
                 {...register('newPassword')}
-                className="border-2 border-slate-600 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+                className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
-                required
+                placeholder='Enter new password'
               />
               {errors?.newPassword && (
-                <span className="text-red-500">{errors.newPassword.message}</span>
+                <span className="text-red-500">
+                  {errors.newPassword.message}
+                </span>
               )}
             </TextField>
 
@@ -69,12 +68,14 @@ const ForgotPassword3: React.FC<Step3Props> = ({
               <Label className="font-medium">Confirm Password</Label>
               <Input
                 {...register('confirmPassword')}
-                className="border-2 border-slate-600 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+                className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
-                required
+                placeholder='Confirm your password'
               />
               {errors?.confirmPassword && (
-                <span className="text-red-500">{errors.confirmPassword.message}</span>
+                <span className="text-red-500">
+                  {errors.confirmPassword.message}
+                </span>
               )}
             </TextField>
 

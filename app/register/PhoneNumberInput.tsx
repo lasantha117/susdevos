@@ -14,7 +14,7 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
         <select 
           id="countryCode" 
           
-          className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-t-2 border-b-2 border-l-2 rounded-l-lg"
+          className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-t-2 border-b-2 border-l-2 border-slate-300 rounded-l-lg"
         >
         <option data-countryCode="DZ" value="213">Algeria (+213)</option>
 		<option data-countryCode="AD" value="376">Andorra (+376)</option>
@@ -237,7 +237,7 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
           name="phoneNumber" 
           placeholder="+94 (555) 000-0000" 
           {...register} 
-          className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-t-2 border-b-2 border-r-2 rounded-r-lg "
+          className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-t-2 border-b-2 border-r-2 border-slate-300 rounded-r-lg "
           style={{ color: 'black' }}
 		  />
       </div>

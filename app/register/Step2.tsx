@@ -40,7 +40,6 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
     
   }
 
-
   return (
     <div className="flex justify-center container p-32">
       <div className="flex flex-col gap-8">
@@ -61,7 +60,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
           <label>Organisation</label>
           <input 
           {...register('organization')}
-          type="text" name="organization" placeholder="Enter Your Name" className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" style={{ color: 'black' }} />
+          type="text" name="organization" placeholder="Enter Your Name" className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 border-slate-300 rounded-lg" style={{ color: 'black' }} />
           {errors.organization && <span className='text-red-500'>{errors.organization.message}</span>}
           <PhoneNumberInput 
               register={register('phoneNumber')}
@@ -72,7 +71,7 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
           <Label>Your Message</Label>
           <textarea
           {...register('message')}
-          name="message" placeholder="Write here if you have anything else to know." className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" style={{ color: 'black' }}/>
+          name="message" placeholder="Write here if you have anything else to know." className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 border-slate-300 rounded-lg" style={{ color: 'black' }}/>
 
           <label>
             <input
