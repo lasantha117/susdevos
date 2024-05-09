@@ -40,11 +40,6 @@ const Step2: React.FC<Step2Props> = ({ onNext, onPrevious, onChange }) => {
     
   }
 
-  // const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   const { name, value } = e.target;
-  //   setFormData({ ...formData, [name]: value });
-  //   onChange({ [name]: value });
-  // };
 
   return (
     <div className="flex justify-center container p-32">
