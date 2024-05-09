@@ -14,18 +14,31 @@ interface Step1Props {
 }
 
 const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<RegisterDataStep1>({
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+    confirmPassword: ''
+
+  });
+
+ 
+  const { register, handleSubmit ,formState:{errors,} } = useForm<RegisterDataStep1>({
     resolver: zodResolver(RegisterSchemaStep1),
   });
 
   const onSubmit = async (data: FieldValues) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    onNext();
+    onNext()
+    
   };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    onChange({ [name]: value });
+  }
+
+
 
   return (
     <div className="flex justify-center container p-32">
@@ -50,15 +63,12 @@ const Step1: React.FC<Step1Props> = ({ onNext, onChange }) => {
         >
           <TextField className="flex flex-col gap-2" name="email">
             <Label>Email*</Label>
-            <Input
-              {...register('email')}
-              className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 border-slate-300 rounded-lg"
-              type="email"
-              placeholder="Enter your Email"
-            />
-            {errors?.email && (
-              <p className="text-red-500">{errors.email.message}</p>
-            )}
+            <Input 
+            { ...register('email')}
+            className="bg-white focus:bg-white outline-none p-2 focus:ring-2 focus:ring-offset-1 transition border-2 rounded-lg" type='email'  placeholder='Enter your Email' value={formData.email} onChange={handleChange} />
+            {
+              errors?.email && <p className='text-red-500'>{errors.email.message}</p>
+            }
           </TextField>
           <TextField className="flex flex-col gap-2" name="password">
             <Label>Password*</Label>
