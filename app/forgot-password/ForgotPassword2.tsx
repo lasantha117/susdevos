@@ -9,9 +9,10 @@ import { Button, Input, Label, Link, TextField } from 'react-aria-components';
 interface Step2Props {
   onNext: () => void;
   onPrevious: () => void;
+  email: string;
 }
 
-const ForgotPassword2: React.FC<Step2Props> = ({ onPrevious, onNext }) => {
+const ForgotPassword2: React.FC<Step2Props> = ({ onPrevious, onNext, email}) => {
   return (
     <div className="flex justify-center container p-32">
       <div className="relative flex flex-col gap-4 w-[360px]">
@@ -31,7 +32,7 @@ const ForgotPassword2: React.FC<Step2Props> = ({ onPrevious, onNext }) => {
             We sent a verification link to{' '}
           </p>
           <p className="text-center text-base font-medium text-gray-500">
-            achala@susdevos.com
+            {email}
           </p>
         </div>
 

@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
+import { ChangeEvent, useState } from 'react';
 import { Input, Label, Link, TextField } from 'react-aria-components';
 import { type FieldValues, useForm } from 'react-hook-form';
 
@@ -11,9 +12,14 @@ import {
 interface Step3Props {
   onNext: () => void;
   onChange: (data: { [key: string]: string }) => void;
+  
 }
 
-const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
+const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange}) => {
+  const [formData, setFormData] = useState({
+    newPassword: '',
+    confirmPassword: '',
+  });
   const {
     register,
     handleSubmit,
@@ -25,6 +31,12 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
   const onSubmit = async (data: FieldValues) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     onNext();
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    onChange({ [name]: value });
   };
 
   return (
@@ -55,7 +67,8 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
                 {...register('newPassword')}
                 className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
-                placeholder='Enter new password'
+                value={formData.newPassword}
+                onChange={handleChange}
               />
               {errors?.newPassword && (
                 <span className="text-red-500">
@@ -70,7 +83,8 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange }) => {
                 {...register('confirmPassword')}
                 className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
                 type="password"
-                placeholder='Confirm your password'
+                value={formData.confirmPassword}
+                onChange={handleChange}
               />
               {errors?.confirmPassword && (
                 <span className="text-red-500">

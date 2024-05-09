@@ -14,10 +14,10 @@ interface Step1Props {
   onChange: (data: { [key: string]: string }) => void;
 }
 
-const ForgotPassword1: React.FC<Step1Props> = ({
-  onNext,
-  onChange,
-}) => {
+const ForgotPassword1: React.FC<Step1Props> = ({ onNext, onChange }) => {
+  const [formData, setFormData] = useState({
+    email: '',
+  });
   const {
     register,
     handleSubmit,
@@ -29,6 +29,12 @@ const ForgotPassword1: React.FC<Step1Props> = ({
   const onSubmit = async (data: FieldValues) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     onNext();
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    onChange({ [name]: value });
   };
 
   return (
@@ -53,8 +59,9 @@ const ForgotPassword1: React.FC<Step1Props> = ({
             <Label className="font-medium">Email</Label>
             <Input
               {...register('email')}
-              className="border-2 border-slate-300 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
-              placeholder='Enter your email'
+              className="border-2 border-slate-600 focus:bg-white outline-none p-2 rounded-lg focus:ring-2 focus:ring-offset-1 transition"
+              value={formData.email}
+              onChange={handleChange}
             />
             {errors?.email && (
               <span className="text-red-500">{errors.email.message}</span>
@@ -68,18 +75,18 @@ const ForgotPassword1: React.FC<Step1Props> = ({
             Reset Password
           </button>
           <Link
-              href="/login"
-              className="flex flex-row gap-2 items-center mx-auto mt-2 px-4 py-2 rounded-lg hover:bg-slate-200 text-slate-700 font-semibold hover:text-slate-900"
-            >
-              <Image
-                className="size-5 w-fit h-fit"
-                src="/Images/ForgetPassword/arrow-left.webp"
-                width={300}
-                height={300}
-                alt="back"
-              />
-              Back to log in
-            </Link>
+            href="/login"
+            className="flex flex-row gap-2 items-center mx-auto mt-2 px-4 py-2 rounded-lg hover:bg-slate-200 text-slate-700 font-semibold hover:text-slate-900"
+          >
+            <Image
+              className="size-5 w-fit h-fit"
+              src="/Images/ForgetPassword/arrow-left.webp"
+              width={300}
+              height={300}
+              alt="back"
+            />
+            Back to log in
+          </Link>
         </form>
       </div>
     </div>
