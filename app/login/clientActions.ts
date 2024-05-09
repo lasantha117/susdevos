@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+
 export const LoginScema = z.object({
   username: z
     .string()
@@ -9,3 +10,5 @@ export const LoginScema = z.object({
     .min(8, { message: 'password should be minimum 8 character long' })
     .max(12, { message: 'password should be less than 12 character long' }),
 });
+
+ export type LoginSchemaData = z.infer<typeof LoginScema>;

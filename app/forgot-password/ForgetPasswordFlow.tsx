@@ -1,13 +1,26 @@
 import { useState } from 'react';
 
+
+
 import ForgotPassword1 from './ForgotPassword1';
 import ForgotPassword2 from './ForgotPassword2';
 import ForgotPassword3 from './ForgotPassword3';
 import ForgotPassword4 from './ForgotPassword4';
 
+
+interface FormData {
+  email: string;
+  newPassword: string;
+  confirmPassword: string;
+}
+
 const ForgetPasswordFlow = () => {
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState<FormData>({
+    email:'',
+    newPassword:'',
+    confirmPassword:'',
+  });
 
   const handleNextStep = () => {
     setStep(step + 1);
@@ -34,7 +47,7 @@ const ForgetPasswordFlow = () => {
         <ForgotPassword2
           onNext={handleNextStep}
           onPrevious={handlePreviousStep}
-         
+          email = {formData.email}
         />
       )}
 
