@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { ChangeEvent, useState } from 'react';
-import { Input, Label, Link, TextField } from 'react-aria-components';
+import { Button, Input, Label, Link, TextField } from 'react-aria-components';
 import { type FieldValues, useForm } from 'react-hook-form';
 
 import {
@@ -93,12 +93,12 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange}) => {
               )}
             </TextField>
 
-            <button
+            <Button
               className="lg:mt-2 text-white bg-slate-950 hover:bg-slate-800 active:bg-slate-900 rounded-lg p-2 outline-none focus:ring-2 focus:ring-offset-1 transition"
               type="submit"
             >
               Reset Password
-            </button>
+            </Button>
 
             <Link
               href="/login"

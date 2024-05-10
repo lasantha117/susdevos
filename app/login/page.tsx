@@ -15,7 +15,6 @@ import { ZodError } from 'zod';
 import ClientForm from '@/components/ClientForm';
 
 import { LoginScema } from './clientActions';
-import Form from './form';
 import { onSubmit } from './serverActions';
 
 export default function Page({
@@ -170,7 +169,6 @@ export default function Page({
             </Link>
           </div>
         </ClientForm>
-        {/* <Form/> */}
       </div>
     </div>
   );

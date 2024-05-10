@@ -36,13 +36,13 @@ const ForgotPassword2: React.FC<Step2Props> = ({ onPrevious, onNext, email}) => 
           </p>
         </div>
 
-        <button
+        <Button
           className="lg:mt-2 text-white bg-slate-950 hover:bg-slate-800 active:bg-slate-900 rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-offset-1 transition"
           type="submit"
-          onClick={onNext}
+          onPress={onNext}
         >
           Open Email App
-        </button>
+        </Button>
         <div className="flex flex-row gap-2 mx-auto">
           <p className="text-center text-base font-medium text-gray-500">
             Didn’t receive the email?

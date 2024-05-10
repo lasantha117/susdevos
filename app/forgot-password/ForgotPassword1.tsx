@@ -68,12 +68,12 @@ const ForgotPassword1: React.FC<Step1Props> = ({ onNext, onChange }) => {
             )}
           </TextField>
 
-          <button
+          <Button
             className="lg:mt-2 text-white bg-slate-950 hover:bg-slate-800 active:bg-slate-900 rounded-lg p-2 outline-none focus:ring-2 focus:ring-offset-1 transition"
             type="submit"
           >
             Reset Password
-          </button>
+          </Button>
           <Link
             href="/login"
             className="flex flex-row gap-2 items-center mx-auto mt-2 px-4 py-2 rounded-lg hover:bg-slate-200 text-slate-700 font-semibold hover:text-slate-900"
