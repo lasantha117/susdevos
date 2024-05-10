@@ -98,9 +98,6 @@ export default function Page({
             {passwordError && (
               <span className="text-red-500">{passwordError}</span>
             )}
-            {passwordError && (
-              <span className="text-red-500">{passwordError}</span>
-            )}
           </TextField>
 
           <div className="flex flex-col lg:inline-flex items-center mb-4">
