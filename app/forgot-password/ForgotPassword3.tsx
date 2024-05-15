@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { ChangeEvent, useState } from 'react';
-import { Button, Input, Label, Link, TextField } from 'react-aria-components';
+import { Button, Form, Input, Label, Link, TextField } from 'react-aria-components';
 import { type FieldValues, useForm } from 'react-hook-form';
 
 import {
@@ -57,7 +57,7 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange}) => {
             Your new password must be different to previously used passwords.
           </p>
 
-          <form
+          <Form
             className="flex flex-col gap-4"
             onSubmit={handleSubmit(onSubmit)}
           >
@@ -113,7 +113,7 @@ const ForgotPassword3: React.FC<Step3Props> = ({ onNext, onChange}) => {
               />
               Back to log in
             </Link>
-          </form>
+          </Form>
         </div>
       </div>
     </>
