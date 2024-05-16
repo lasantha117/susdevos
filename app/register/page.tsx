@@ -1,52 +1,54 @@
-import { Button, Input, Label, Link, TextField } from 'react-aria-components';
+"use client";
 
-import ClientForm from '@/components/ClientForm';
+import React, { useState } from 'react';
+import Step1 from './Step1';
+import Step2 from './Step2';
+import Step3 from './Step3';
 
-import { onSubmit } from './serverActions';
+const RegistrationFlow = () => {
+  // Define state variables using the useState hook
+  // - 'step': represents the current step in the registration flow
+  // - 'formData': stores the form data collected from the registration flow
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({});
 
-export default function Page({
-  params,
-  searchParams,
-}: {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
+  // Function that handles moving to the next step in the registration flow
+  const handleNextStep = () => {
+    // Increment the 'step' state to move to the next step
+    setStep(step + 1);
+  };
+
+  // Function that handles moving to the previous step in the registration flow
+  const handlePreviousStep = () => {
+    // Decrement the 'step' state to move to the previous step
+    setStep(step - 1);
+  };
+
+  // Function that handles changes in form data
+  // This function is passed down to child components to update the 'formData' state
+  const handleFormDataChange = (data: { [key: string]: string }) => {
+    setFormData({ ...formData, ...data });
+  };
+
   return (
-    <div className="flex justify-center container p-32">
-      <div className="flex flex-col gap-8">
-        <h1 className="text-3xl">Register</h1>
-        <ClientForm
-          className="flex flex-col gap-4"
-          action={onSubmit}
-          initialState={{ error: '' }}
-        >
-          <TextField className="flex flex-col gap-2" name="username">
-            <Label>Username</Label>
-            <Input className="bg-blue-50 focus:bg-white outline-none p-2 rounded focus:ring-2 focus:ring-offset-1 transition" />
-          </TextField>
-          <TextField className="flex flex-col gap-2" name="password">
-            <Label>Password</Label>
-            <Input
-              className="bg-blue-50 focus:bg-white outline-none p-2 rounded focus:ring-2 focus:ring-offset-1 transition"
-              type="password"
-            />
-          </TextField>
-          <Button
-            className="bg-blue-300 hover:bg-blue-100 active:bg-blue-500 rounded p-2 outline-none focus:ring-2 focus:ring-offset-1 transition"
-            type="submit"
-          >
-            Register
-          </Button>
-          <div className="flex justify-center">
-            <Link
-              className="text-blue-600 outline-none hover:border-b border-blue-600"
-              href="/login"
-            >
-              Login
-            </Link>
-          </div>
-        </ClientForm>
-      </div>
+    <div>
+      {/* Conditional rendering based on the current step */}
+      {/* Render Step1 component if 'step' is 1 */}
+      {step === 1 && <Step1 
+          onNext={handleNextStep} 
+          onChange={handleFormDataChange} />}
+      {/* Render Step2 component if 'step' is 2 */}
+      {step === 2 && <Step2 
+          onNext={handleNextStep} 
+          onPrevious={handlePreviousStep} 
+          onChange={handleFormDataChange} 
+          />}
+      {/* Render Step3 component if 'step' is 3 */}
+      {step === 3 && <Step3 
+          onPrevious={handlePreviousStep}
+          email = {formData.email} />}
     </div>
   );
-}
+};
+
+export default RegistrationFlow;

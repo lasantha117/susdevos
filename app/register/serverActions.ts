@@ -1,3 +1,4 @@
+
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
@@ -14,3 +15,4 @@ export async function onSubmit(oldState: any, formData: FormData) {
   }
   return redirect('/'); // NextJs uses errors for redirects
 }
+
