@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-
-
 import ForgotPassword1 from './ForgotPassword1';
 import ForgotPassword2 from './ForgotPassword2';
 import ForgotPassword3 from './ForgotPassword3';
