@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { Button} from 'react-aria-components';
 
 //Create main variable for creating card
 interface CardProps {
@@ -34,7 +35,7 @@ const Card: React.FC<CardProps> = ({ title, content, image, buttonLogic }) => {
       {/*Adding below button*/}
       <div className="flex justify-end items-end flex-grow">
         {buttonLogic && (
-          <button className="h-12 w-12 flex items-center justify-center rounded-full">
+          <Button className="h-12 w-12 flex items-center justify-center rounded-full">
             <Image
               src="/Images/ButtonCard/CircledUpRight.png"
               alt="Button Image"
@@ -42,7 +43,7 @@ const Card: React.FC<CardProps> = ({ title, content, image, buttonLogic }) => {
               height={50}
               className="rounded-full hover:bg-slate-300"
             />
-          </button>
+          </Button>
         )}
       </div>
     </div>
